@@ -1,0 +1,356 @@
+/*---------------- IMPORTS ----------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/*---------------- GENERAL ----------------*/
+
+:root {
+    --color-amarillo: #EAC926;
+    --color-azul: #03264C;
+    --color-celeste: #1259C3;
+    --color-gris-oscuro: #666;
+    --color-gris-claro: #EBEBEB;
+    --color-verde: #39B54A;
+    --color-black: #000;
+    --color-white: #FFF;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--color-gris-claro);
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+
+/*---------------- HEADER ----------------*/
+
+header {
+    background-color: var(--color-amarillo);
+    padding: 1rem 1rem 0;
+}
+
+.titleBar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titleBar .logo {
+    width: 50%;
+    margin: 0;
+    padding-right: 0.5rem;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: space-between;
+    color: var(--color-gris-oscuro);
+    background-color: var(--color-white);
+    /* border: 1px solid var(--color-gris-oscuro); */
+    border-radius: 5px;
+    width: 50%;
+    height: 2rem;
+}
+
+.search-bar p {
+    margin: 0;
+    padding-left: 0.5rem;
+    overflow: hidden;
+    white-space: nowrap;
+    align-self: center;
+}
+
+.btn-search {
+    align-self: center;
+    /* background-color: var(--color-gris-claro); */
+    border: 0 0 0 1px solid var(--color-gris-oscuro);
+    font-size: 12px;
+    display: inline;
+    padding: 0.5rem;
+}
+
+.navBar {
+    display: none;
+    justify-content: space-between;
+}
+
+.site, .login {
+    display: flex;
+    padding: 1rem;
+}
+
+.site li, .login li {
+    list-style: none;
+    padding: 0.8rem;
+}
+
+.site li a:link, .login li a:link {
+    color: var(--color-black);
+    text-decoration: none;
+}
+
+.site li a:visited, .login li a:visited {
+    color: var(--color-black);
+    text-decoration: none;
+}
+
+.site li a:hover, .login li a:hover {
+    color: var(--color-celeste);
+    text-decoration: none;
+}
+
+.burger-menu {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding-bottom: 1rem;
+}
+
+.burger-menu .btn-burger-menu {
+    color: var(--color-white);
+    border: none;
+    padding: 0.5rem 0.7rem;
+    border-radius: 0.3rem;
+    background-color: var(--color-celeste);
+}
+
+@media (min-width: 361px) {
+    .navBar, .titleBar {
+        display: flex;
+    }
+    
+    .burger-menu {
+        display: none;
+    }
+
+    .mainBar {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .titleBar {
+        flex-wrap: nowrap;
+        width: 66%;
+    }
+
+    .center-text {
+        display: inline-flex;
+        width: 100%;
+    }
+
+    header .navBar a {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    header .navBar li {
+        padding: 0.3rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .navBar, .titleBar {
+        display: flex;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    .mainBar {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .titleBar {
+        flex-wrap: nowrap;
+        width: 66%;
+    }
+
+    .center-text {
+        display: inline-flex;
+        width: 100%;
+    }
+}
+
+/*---------------- MAIN ----------------*/
+
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.banner {
+    /* position: absolute; */
+    width: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.banner .banner-image {
+    width: 100vw;
+}
+
+main section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.text {
+    font-size: 12px;
+}
+
+.title {
+    font-size: 24px;
+    color: var(--color-gris-oscuro);
+}
+
+.price {
+    font-size: 18px;
+    width: 30%;
+}
+
+.discount, .content {
+    font-size: 16px;
+}
+
+.center-text {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.article {
+    margin: 10px 0;
+    background-color: var(--color-white);
+}
+
+.article img {
+    width: 100%
+}
+
+.article .box {
+    border-top: 1px solid var(--color-gris-claro);
+    padding: 15px;
+}
+
+/* .article .box .i-shipment {
+    color: var(--color-verde);
+    width: 1rem;
+    padding: 0.6rem;
+    border: 2px solid var(--color-verde);
+    border-radius: 50%;
+} */
+.article .box .i-shipment {
+    color: var(--color-verde);
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--color-verde);
+    background-color: var(--color-white);
+    border-radius: 50%;
+    position: relative;
+    right: -88%;
+    top: -30px;
+}
+
+.article .box .discount {
+    color: var(--color-verde);
+}
+
+.article .box .content {
+    display: none;
+    color: var(--color-gris-oscuro);
+}
+
+.article .box span {
+    display: block;
+}
+
+.price-box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 361px) {
+    .article {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    .article .box .content {
+        display: block;
+    }
+
+    main section {
+        justify-content: space-between;
+    }
+
+    main section article {
+        width: 48%;
+    }
+}
+
+@media (min-width: 769px) {
+    .article {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    .article .box .content {
+        display: block;
+    }
+
+    main section {
+        justify-content: space-between;
+    }
+
+    main section article {
+        width: 24%;
+    }
+}
+
+/*---------------- FOOTER ----------------*/
+
+footer section {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    margin-top: 4rem;
+    color: var(--color-gris-oscuro);
+}
+
+footer section .icon {
+    display: block;
+    color: var(--color-celeste);
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+footer section p {
+    margin: 0;
+}
+
+footer .copyright {
+    text-align: start;
+    color: var(--color-gris-oscuro);
+    padding: 5vw;
+    margin-top: 1rem;
+}
+
+/*---------------- END ----------------*/
+
