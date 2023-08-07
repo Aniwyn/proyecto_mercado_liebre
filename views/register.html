@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="mainBar">
+            <div class="titleBar">
+                <img src="/images/logo-mercado-liebre.svg" alt="logo mercado liebre" class="logo">
+                <div class="search-bar">
+                    <p class="text">Buscar productos, marcas</p>
+                    <div class="btn-search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p class="text center-text"><i class="fa-solid fa-hand-holding-dollar"></i> Comprá en cuotas y sin tarjeta de crédito</p>
+            </div>
+        </div>
+        <div class="navBar">
+            <ul class="site">
+                <li><a href="#">Oferta</a></li>
+                <li><a href="#">Tiendas Oficiales</a></li>
+                <li><a href="#">Vender</a></li>
+                <li><a href="#">Ayuda</a></li>
+            </ul>
+            <ul class="login">
+                <li><a href="/register">Creá tu cuenta <i class="fa-solid fa-id-card"></i></a></li>
+                <li><a href="/login">Ingresá <i class="fa-solid fa-right-to-bracket"></i></a></li>
+                <li><a href="#">Mis compras <i class="fa-solid fa-basket-shopping"></i></a></li>
+            </ul>
+        </div>
+        <div class="burger-menu">
+            <button class="btn-burger-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+    <main>
+        <form action="/" method="get">
+            <div class="section_form">
+                <label class="title" for="name">Nombre y apellido</label>
+                <input type="text" name="name" placeholder="Nombre" minlength="2" class="text_input" id="name" required>
+            </div>
+            <div class="section_form">
+                <label class="title" for="user">Nombre de usuario</label>
+                <input type="text" name="user" placeholder="Usuario" minlength="2" class="text_input" id="user" required>
+            </div>
+            <div class="section_form">
+                <label class="title" for="email">Correo electrónico</label>
+                <input type="email" name="email" placeholder="example@example.com"  class="text_input" id="email" required>
+            </div>
+            <div class="section_form">
+                <label class="title" for="birthdate">Fecha de nacimiento</label>
+                <input type="date" name="birthdate"  class="text_input" min="1923-01-01" max="2024-01-01" id="birthdate" required>
+            </div>
+            <div class="section_form">
+                <label class="title" for="residence">Domicilio</label>
+                <input type="text" name="residence" placeholder="Domicilio" class="text_input" id="residence" required>
+            </div>
+            <div class="section_form">
+                <label class="title" for="userperfil">Perfil del usuario</label>
+                <div class="multiple_input">
+                    <div>
+                        <input type="radio" name="userperfil" value="Comprar" id="userperfil_buy">
+                        <label for="userperfil_buy">Comprar</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="userperfil" value="Vender" id="userperfil_sale">
+                        <label for="userperfil_sale">Vender</label>
+                    </div>
+                </div>
+            </div>
+            <div class="section_form">
+                <label class="title" for="interestcategory">Perfil del usuario</label>
+                <div class="multiple_input">
+                    <div>
+                        <input type="checkbox" value="electro" name="interestcategory" id="ic_electro">
+                        <label for="ic_electro">Electro</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="moda" name="interestcategory" id="ic_moda">
+                        <label for="ic_moda">Moda</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="hogar" name="interestcategory" id="ic_hogar">
+                        <label for="ic_hogar">Hogar</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="jugueteria" name="interestcategory" id="ic_jugueteria">
+                        <label for="ic_jugueteria">Juguetería</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="vida_sana" name="interestcategory" id="ic_vida_sana">
+                        <label for="ic_vida_sana">Vida sana</label>
+                    </div>
+                </div>
+            </div>
+            <div class="section_form">
+                <label class="title" for="avatar">Foto de perfil</label>
+                <input type="file" name="avatar" accept="image/png, image/jpeg" id="avatar">
+            </div>
+            <div class="section_form">
+                <label class="title" for="password">Contraseña</label>
+                <input type="password" name="password" placeholder="Contraseña" class="text_input" minlength="8" maxlength="30" required id="password">
+                <input type="password" name="password" placeholder="Repetir contraseña" class="text_input" minlength="8" maxlength="30" required>
+            </div>
+            <div class="section_form">
+                <button type="reset" class="btn_reset">Borrar</button>
+                <button type="submit" class="btn_submit">Enviar</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
