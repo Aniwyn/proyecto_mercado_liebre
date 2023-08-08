@@ -2,6 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,400&display=swap');
+
 /*---------------- VARIABLES ----------------*/
 
 :root {
@@ -24,25 +26,41 @@
     }
 
     25% {
-        height: 5%;
+        height: 15%;
         font-size: 0.25rem;
     }
 
     50% {
-        height: 10%;
+        height: 25%;
         font-size: 0.5rem;
     }
 
     75% {
-        height: 15%;
+        height: 60%;
         font-size: 0.75rem;
     }
 
     100% {
-        height: 20%;
+        height: 100%;
         font-size: 1rem;
     }
 }
+
+@keyframes turnTruck {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(-90deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
 
 /*---------------- GENERAL ----------------*/
 
@@ -55,7 +73,8 @@
 body {
     margin: 0;
     background-color: var(--color-gris-claro);
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Roboto Flex', sans-serif;
     box-sizing: border-box;
 }
 
@@ -113,12 +132,12 @@ header {
     font-size: 12px;
     display: inline;
     padding: 0.5rem;
+    cursor: pointer;
 }
 
-.titleBar .btn-search:hover {
-    color: var(--color-celeste);
-    font-size: 0.8rem;
-    transition: 0.3s;
+.titleBar .btn-search:active {
+    transition: 0;
+    background-color: var(--color-gris-claro);
 }
 
 .navBar {
@@ -130,6 +149,12 @@ header {
 .login {
     display: flex;
     padding: 1rem 1rem 0.5rem;
+}
+
+.site li,
+.login li {
+    list-style: none;
+    padding: 0.8rem;
 }
 
 .site li,
@@ -169,20 +194,15 @@ header {
     padding: 0.5rem 0.7rem;
     border-radius: 0.3rem;
     background-color: var(--color-celeste);
+    cursor: pointer;
+}
+
+.burger-menu .btn-burger-menu:active {
+    background-color: var(--color-azul);
 }
 
 /* se cambio de 361 a 391 para que tenga concordacia con dispositivos actuales */
 @media (min-width: 391px) {
-
-    .navBar,
-    .titleBar {
-        display: flex;
-    }
-
-    .burger-menu {
-        display: none;
-    }
-
     .mainBar {
         display: flex;
         flex-wrap: nowrap;
@@ -198,6 +218,7 @@ header {
     .center-text {
         display: inline-flex;
         width: 100%;
+        padding-left: 1rem;
     }
 
     header .navBar a {
@@ -221,6 +242,10 @@ header {
         display: none;
     }
 
+    .center-text {
+        padding-left: 1rem;
+    }
+
     .mainBar {
         display: flex;
         flex-wrap: nowrap;
@@ -239,6 +264,19 @@ header {
         padding: 0 0.5rem;
     }
 
+}
+
+/*---------------- BANNER ----------------*/
+
+.banner {
+    width: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.banner .banner-image {
+    width: 100%;
 }
 
 /*---------------- MAIN ----------------*/
@@ -280,7 +318,8 @@ main section {
 }
 
 .center-text {
-    font-size: 12px;
+    font-weight: 200;
+    font-size: 14px;
     text-align: center;
     margin: 1rem 0;
 }
@@ -289,13 +328,18 @@ main section {
     position: relative;
     margin: 10px 0;
     background-color: var(--color-white);
+    cursor: pointer;
 }
 
-.article .shadow_cotent {
+.article .image {
+    position: relative;
+}
+
+.article .image .shadow_cotent {
     display: flex;
     position: absolute;
     width: 100%;
-    height: 20%;
+    height: 100%;
     top: 0;
     right: 0;
     z-index: 10;
@@ -334,14 +378,14 @@ main section {
     background-color: var(--color-white);
     border-radius: 50%;
     position: absolute;
+    z-index: 12;
     right: 20px;
     top: -15px;
     transition: 0.3s;
 }
 
 .article .box .i-shipment:hover {
-    transition: 0.3s;
-    transform: rotate(-90deg);
+    animation: turnTruck 0.5s 1;
 }
 
 .article .box .discount {
@@ -361,17 +405,30 @@ main section {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: 0.4rem;
 }
 
 .price {
-    font-size: 18px;
-    width: 30%;
+    font-size: 20px;
     overflow: hidden;
-    /* width: 50%; */
+    padding-right: 1rem;
 }
 
+.discount {
+    font-size: 14px;
+}
 
+.description {
+    color: var(--color-gris-oscuro);
+    height: 1rem;
+    font-size: 0;
+    transition: 0.2s;
+    margin-bottom: 1rem;
+}
+
+.article:hover .description {
+    font-size: 1rem;
+}
 
 @media (min-width: 391px) {
     .article:hover {
@@ -393,7 +450,6 @@ main section {
 
     .price {
         width: auto;
-        padding-right: 0.5rem;
     }
 }
 
@@ -420,13 +476,14 @@ main section {
         display: inline-flex;
         width: 100%;
     }
-
-    .price {
-        width: 30%;
-    }
 }
 
 /*---------------- FOOTER ----------------*/
+
+footer {
+    background: var(--color-white);
+    margin-top: 2rem;
+}
 
 footer .sections {
     width: 90vw;
@@ -439,7 +496,7 @@ footer .sections {
 footer section {
     text-align: center;
     margin: auto;
-    margin-top: 4rem;
+    margin-top: 2rem;
     color: var(--color-gris-oscuro);
 }
 
@@ -451,7 +508,7 @@ footer section .icon {
 }
 
 footer section .icon:hover {
-    color: var(--color-amarillo);
+    color: #5d96ec;
 }
 
 footer section p {

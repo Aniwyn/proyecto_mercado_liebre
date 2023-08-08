@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/register.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <header>
         <div class="mainBar">
             <div class="titleBar">
                 <img src="/images/logo-mercado-liebre.svg" alt="logo mercado liebre" class="logo">
-                <div class="search-bar">
-                    <p class="text">Buscar productos, marcas</p>
-                    <div class="btn-search">
+                <form class="search-bar">
+                    <input type="text" class="input_search" placeholder="Buscar productos, marcas">
+                    <button type="submit" class="btn-search">
                         <i class="fa-solid fa-magnifying-glass"></i>
-                    </div>
-                </div>
+                    </button>
+                </form>
             </div>
             <div>
-                <p class="text center-text"><i class="fa-solid fa-hand-holding-dollar"></i> Comprá en cuotas y sin tarjeta de crédito</p>
+                <p class="center-text"><i class="fa-solid fa-hand-holding-dollar"></i> Comprá en cuotas y sin tarjeta de
+                    crédito</p>
             </div>
         </div>
         <div class="navBar">
@@ -44,79 +49,115 @@
         </div>
     </header>
     <main>
-        <form action="/" method="get">
-            <div class="section_form">
-                <label class="title" for="name">Nombre y apellido</label>
-                <input type="text" name="name" placeholder="Nombre" minlength="2" class="text_input" id="name" required>
-            </div>
-            <div class="section_form">
-                <label class="title" for="user">Nombre de usuario</label>
-                <input type="text" name="user" placeholder="Usuario" minlength="2" class="text_input" id="user" required>
-            </div>
-            <div class="section_form">
-                <label class="title" for="email">Correo electrónico</label>
-                <input type="email" name="email" placeholder="example@example.com"  class="text_input" id="email" required>
-            </div>
-            <div class="section_form">
-                <label class="title" for="birthdate">Fecha de nacimiento</label>
-                <input type="date" name="birthdate"  class="text_input" min="1923-01-01" max="2024-01-01" id="birthdate" required>
-            </div>
-            <div class="section_form">
-                <label class="title" for="residence">Domicilio</label>
-                <input type="text" name="residence" placeholder="Domicilio" class="text_input" id="residence" required>
-            </div>
-            <div class="section_form">
-                <label class="title" for="userperfil">Perfil del usuario</label>
-                <div class="multiple_input">
-                    <div>
-                        <input type="radio" name="userperfil" value="Comprar" id="userperfil_buy">
-                        <label for="userperfil_buy">Comprar</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="userperfil" value="Vender" id="userperfil_sale">
-                        <label for="userperfil_sale">Vender</label>
+        <div class="form__container">
+            <h3 class="form__title">Registro de usuario</h3>
+            <form action="/" method="get">
+                <div class="section_form">
+                    <label class="title" for="name">Nombre y apellido</label>
+                    <input type="text" name="name" placeholder="Nombre" minlength="2" class="text_input" id="name"
+                        required>
+                </div>
+                <div class="section_form">
+                    <label class="title" for="user">Nombre de usuario</label>
+                    <input type="text" name="user" placeholder="Usuario" minlength="2" class="text_input" id="user"
+                        required>
+                </div>
+                <div class="section_form">
+                    <label class="title" for="email">Correo electrónico</label>
+                    <input type="email" name="email" placeholder="example@example.com" class="text_input" id="email"
+                        required>
+                </div>
+                <div class="section_form">
+                    <label class="title" for="birthdate">Fecha de nacimiento</label>
+                    <input type="date" name="birthdate" class="text_input" min="1923-01-01" max="2024-01-01"
+                        id="birthdate" required>
+                </div>
+                <div class="section_form">
+                    <label class="title" for="residence">Domicilio</label>
+                    <input type="text" name="residence" placeholder="Domicilio" class="text_input" id="residence"
+                        required>
+                </div>
+                <div class="section_form">
+                    <label class="title" for="userperfil">Perfil del usuario</label>
+                    <div class="multiple_input">
+                        <div>
+                            <input type="radio" name="userperfil" value="Comprar" id="userperfil_buy">
+                            <label for="userperfil_buy">Comprar</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="userperfil" value="Vender" id="userperfil_sale">
+                            <label for="userperfil_sale">Vender</label>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="section_form">
-                <label class="title" for="interestcategory">Perfil del usuario</label>
-                <div class="multiple_input">
-                    <div>
-                        <input type="checkbox" value="electro" name="interestcategory" id="ic_electro">
-                        <label for="ic_electro">Electro</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" value="moda" name="interestcategory" id="ic_moda">
-                        <label for="ic_moda">Moda</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" value="hogar" name="interestcategory" id="ic_hogar">
-                        <label for="ic_hogar">Hogar</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" value="jugueteria" name="interestcategory" id="ic_jugueteria">
-                        <label for="ic_jugueteria">Juguetería</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" value="vida_sana" name="interestcategory" id="ic_vida_sana">
-                        <label for="ic_vida_sana">Vida sana</label>
+                <div class="section_form">
+                    <label class="title" for="interestcategory">Intereses</label>
+                    <div class="multiple_input">
+                        <div>
+                            <input type="checkbox" value="electro" name="interestcategory" id="ic_electro">
+                            <label for="ic_electro">Electro</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" value="moda" name="interestcategory" id="ic_moda">
+                            <label for="ic_moda">Moda</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" value="hogar" name="interestcategory" id="ic_hogar">
+                            <label for="ic_hogar">Hogar</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" value="jugueteria" name="interestcategory" id="ic_jugueteria">
+                            <label for="ic_jugueteria">Juguetería</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" value="vida_sana" name="interestcategory" id="ic_vida_sana">
+                            <label for="ic_vida_sana">Vida sana</label>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="section_form">
-                <label class="title" for="avatar">Foto de perfil</label>
-                <input type="file" name="avatar" accept="image/png, image/jpeg" id="avatar">
-            </div>
-            <div class="section_form">
-                <label class="title" for="password">Contraseña</label>
-                <input type="password" name="password" placeholder="Contraseña" class="text_input" minlength="8" maxlength="30" required id="password">
-                <input type="password" name="password" placeholder="Repetir contraseña" class="text_input" minlength="8" maxlength="30" required>
-            </div>
-            <div class="section_form">
-                <button type="reset" class="btn_reset">Borrar</button>
-                <button type="submit" class="btn_submit">Enviar</button>
-            </div>
-        </form>
+                <div class="section_form">
+                    <label class="title" for="avatar">Foto de perfil</label>
+                    <input type="file" name="avatar" accept="image/png, image/jpeg" id="avatar">
+                </div>
+                <div class="section_form">
+                    <label class="title" for="password">Contraseña</label>
+                    <input type="password" name="password" placeholder="Contraseña" class="text_input" minlength="8"
+                        maxlength="30" required id="password">
+                    <input type="password" name="password" placeholder="Repetir contraseña" class="text_input"
+                        minlength="8" maxlength="30" required>
+                </div>
+                <div class="section_form">
+                    <button type="reset" class="btn_reset">Borrar</button>
+                    <button type="submit" class="btn_submit">Enviar</button>
+                </div>
+            </form>
+        </div>
     </main>
+    <footer>
+        <div class="sections">
+            <section>
+                <i class="fa-solid fa-credit-card icon"></i>
+                <strong class="content">Pagá con tarjeta o en efectivo</strong>
+                <p class="text">Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en
+                    puntos de pago. ¡Y siempre es seguro!</p>
+            </section>
+            <section>
+                <i class="fa-solid fa-gift icon"></i>
+                <strong class="content">Envío gratis desde $ 2.500</strong>
+                <p class="text">Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de
+                    productos. Es un beneficio de Mercado Puntos.</p>
+            </section>
+            <section>
+                <i class="fa-solid fa-user-shield icon"></i>
+                <strong class="content">Seguridad, de principio a fin</strong>
+                <p class="text">¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer,
+                    porque estás siempre protegid@.</p>
+            </section>
+        </div>
+        <div class="copyright">
+            <span class="text">Copyright © 1999-2020 MercadoLiebre S.R.L.</span>
+        </div>
+    </footer>
 </body>
+
 </html>

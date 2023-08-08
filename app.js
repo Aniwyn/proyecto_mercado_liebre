@@ -24,5 +24,5 @@ app.get('/login', (request, response) => {
 
 const port = process.env.port || 8080;
 app.listen(port, () => {
-    console.log(`[server]: running at port $[port] (http://localhost:$[port]/).`);
+    console.log(`[server]: running at port ${port} (http://localhost:${port}/).`);
 })
