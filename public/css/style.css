@@ -13,6 +13,7 @@
     --color-gris-oscuro: #666;
     --color-gris-claro: #EBEBEB;
     --color-verde: #39B54A;
+    --color-red: #dd4e4b;
     --color-black: #000;
     --color-white: #FFF;
 }
@@ -94,9 +95,13 @@ header {
     align-items: center;
 }
 
-.titleBar .logo {
+.titleBar a {
     width: 50%;
     max-width: 150px;
+}
+
+.titleBar .logo {
+    width: 100%;
     margin: 0;
     padding-right: 0.5rem;
 }

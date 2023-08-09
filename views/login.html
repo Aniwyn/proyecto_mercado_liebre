@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/register.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <header>
         <div class="mainBar">
             <div class="titleBar">
-                <img src="/images/logo-mercado-liebre.svg"alt="logo mercado liebre" class="logo">
-                <div class="search-bar">
-                    <p class="text">Buscar productos, marcas</p>
-                    <div class="btn-search">
+                <a href="/">
+                    <img src="/images/logo-mercado-liebre.svg" alt="logo mercado liebre" class="logo">
+                </a>
+                <form class="search-bar">
+                    <input type="text" class="input_search" placeholder="Buscar productos, marcas">
+                    <button type="submit" class="btn-search">
                         <i class="fa-solid fa-magnifying-glass"></i>
-                    </div>
-                </div>
+                    </button>
+                </form>
             </div>
             <div>
-                <p class="text center-text"><i class="fa-solid fa-hand-holding-dollar"></i> Comprá en cuotas y sin tarjeta de crédito</p>
+                <p class="center-text"><i class="fa-solid fa-hand-holding-dollar"></i> Comprá en cuotas y sin tarjeta de
+                    crédito</p>
             </div>
         </div>
         <div class="navBar">
@@ -44,19 +51,22 @@
         </div>
     </header>
     <main>
-        <form action="/" method="get">
-            <div class="section_form">
-                <label for="user" class="title" >Nombre de usuario</label>
-                <input type="text" class="text_input" name="user" placeholder="Usuario" minlength="2">
-            </div>
-            <div class="section_form">
-                <label for="password" class="title">Contraseña</label>
-                <input type="password" class="text_input" name="password" placeholder="Contraseña">
-            </div>
-            <div class="section_form">
-                <button type="submit" class="btn_submit">Enviar</button>
-            </div>
-        </form>
+        <div class="form__container">
+            <form action="/" method="get">
+                <div class="section_form">
+                    <label for="user" class="title">Nombre de usuario</label>
+                    <input type="text" class="text_input" name="user" placeholder="Usuario" minlength="2">
+                </div>
+                <div class="section_form">
+                    <label for="password" class="title">Contraseña</label>
+                    <input type="password" class="text_input" name="password" placeholder="Contraseña">
+                </div>
+                <div class="section_form">
+                    <button type="submit" class="btn_submit">Enviar</button>
+                </div>
+            </form>
+        </div>
     </main>
 </body>
+
 </html>
